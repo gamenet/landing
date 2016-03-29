@@ -1,0 +1,220 @@
+body {
+    background: #282828 url(https://gn341.cdn.gamenet.ru/TY0Xv2riHu/1CUDI/o_1THFrG.jpg) no-repeat top center;
+    background-size:100% 130%;
+}
+.l_main {
+    min-width:980px;
+    min-height:740px;
+    width:100%;
+    height:100%;
+    max-width:2560px;
+    max-height:1600px;
+    margin:0 auto;
+    padding:0 !important;
+}
+.l_main__body {
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:0;
+    padding:0;
+    width:100%;
+}
+.l_main:after {
+    display:none;
+}
+.b-phantomers-cbt {
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    font-family: Verdana, 'MS Sans Serif', Arial, sans-serif;
+}
+.b-phantomers-cbt__logo {
+    display: block;
+    position: absolute;
+    top: 82px;
+    left:50%;
+    width: 776px;
+    margin-left: -386px;
+    height: 100px;
+    background: transparent url(/images/landing/phantomers-logo.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.b-phantomers-cbt__date {
+    font-size: 36px;
+    position: absolute;
+    top: 220px;
+    left:50%;
+    width: 540px;
+    margin-left: -270px;
+}
+.b-phantomers-cbt__date_white {
+    color:#ffffff;
+}
+.b-phantomers-cbt__date_red {
+    color:#ef4035;
+}
+.b-phantomers-cbt__bt {
+    display: inline-block;
+    background: transparent url(/images/landing/cbt-btn.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+    height: 91px;
+    width: 370px;
+}
+.b-phantomers-cbt__bt_apply {
+    position: absolute;
+    bottom: 20%;
+    left:50%;
+    margin-left: -185px;
+    height: 91px;
+    width: 370px;
+    text-align: center;
+    color:#0e0d0d;
+    font-size: 26px;
+    line-height: 91px;
+}
+.b-phantomers-cbt__bt_send {
+    height: 61px;
+    width: 244px;
+    text-align: center;
+    color:#0e0d0d;
+    font-size: 26px;
+    line-height: 61px;
+    margin-bottom: 10px;
+}
+.b-phantomers-cbt__bt:hover {
+    background: transparent url(/images/landing/cbt-btn-hover.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+.b-phantomers-cbt__copyright {
+    display: block;
+    position: absolute;
+    bottom: 27px;
+    left:50%;
+    width: 145px;
+    margin-left: -270px;
+    height: 41px;
+    color:#66676b;
+    font-size: 12px;
+    padding-left: 395px;
+    z-index: 1;
+}
+.b-phantomers-cbt__copyright:before {
+    content: "";
+    width: 362px;
+    height: 41px;
+    background: transparent url(/images/landing/cbt-logo-copyright.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+.b-phantomers-cbt__copyright-row:first-child {
+    margin-top: 5px;
+}
+.b-phantomers-cbt__copyright-row {
+    display: block;
+    white-space: nowrap;
+    line-height: 18px;
+}
+.b-phantomers-cbt__form {
+    width: 340px;
+    height: auto;
+    position: absolute;
+    bottom: 15%;
+    left:50%;
+    margin-left: -190px;
+    background: #d9d0ca;
+    z-index: 2;
+    padding: 15px 25px;
+}
+.b-phantomers-cbt__form-row {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+.b-phantomers-cbt__form-chapter {
+    color:#310a0a;
+    font-size: 26px;
+    line-height: 26px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    display: inline-block;
+}
+.b-phantomers-cbt__input {
+    width: 316px;
+    height: 51px;
+    line-height: 51px;
+    text-align: center;
+    color:#310a0a;
+    border-top:solid 1px #aba8a6;
+    border-right:solid 1px #aba8a6;
+    border-left:solid 1px #eae7e5;
+    border-bottom:solid 1px #eae7e5;
+}
+.b-phantomers-cbt__form-row_text {
+    text-align: left;
+}
+.b-phantomers-cbt__error {
+    background: #bc1d1b;
+    color:#ffffff;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 0 15px;
+    position: absolute;
+    top:10px;
+    left:350px;
+    white-space: nowrap;
+}
+.b-phantomers-cbt__error:before {
+    content: "";
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #bc1d1b;
+    border-width: 15px;
+    left:-20px;
+    top:50%;
+    margin-left: -9px;
+    margin-top: -15px;
+}
+
+.b-phantomers-cbt__link {
+    display: block;
+    text-decoration: underline;
+    padding-top: 5px;
+}
+
+@media all and (max-width: 1359px) {
+    .b-phantomers-cbt__logo {
+        top:57px;
+        width: 548px;
+        margin-left: -274px;
+        height: 72px;
+    }
+    .b-phantomers-cbt__date {
+        font-size: 25px;
+        top: 155px;
+        width: 380px;
+        margin-left: -190px;
+    }
+}

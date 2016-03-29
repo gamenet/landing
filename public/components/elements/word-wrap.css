@@ -1,0 +1,34 @@
+
+.gn_word-wrap {
+    max-width: 470px;
+    -webkit-word-break: break-word;
+    -webkit-word-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .gn_word-wrap {
+        display:block;
+    }
+}
+
+.gn_word-wrap_w700 {
+    max-width: 700px;
+}
+
+.gn_word-wrap_w470 {
+    max-width: 470px;
+}
+
+.gn_word-wrap_w300 {
+    max-width: 300px;
+}
+
+.gn_word-wrap_w160 {
+    max-width: 160px;
+}

@@ -1,0 +1,32 @@
+
+.gn_icon {
+    display: inline-block;
+    position: relative;
+    top:1px;
+    background: url('/common/picts/icons-controls.png') no-repeat;
+}
+
+.gn_icon-delete {
+    width: 11px;
+    height: 11px;
+    background: url('/images/close_min.png') no-repeat;
+}
+
+.gn_icon-date {
+    width: 16px;
+    height: 16px;
+    background-position: 0 0;
+    cursor: pointer;
+    display: inline-block;
+}
+.gn_icon-right-abslt {
+    position: absolute;
+    right:3px;
+    top:3px;
+    z-index: 10;
+}
+
+
+
+
+

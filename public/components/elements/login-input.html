@@ -1,0 +1,10 @@
+<div class="field--wrapper" data-bind="css: {collapsed: focusedOrNotEmpty, shake: hasErrorOnUnfocused}">
+    <label for="login" data-bind="css: {focused: isFocused, error: hasErrorOnUnfocused, valid: login.valid}">Почта</label>
+    <input type="text" name="login" id="login" autocomplete="on" tabindex="1" data-bind="value: login, valueUpdate: 'input', click: setFocus, hasFocus: isFocused, css: {valid: login.valid, error: hasErrorOnUnfocused}"/>
+</div>
+<div class="login-popup-form_message" data-bind="visible: canShowError() && login.hasError()">
+    <span data-bind="text: login.validationMessage"/>
+    <span data-bind="visible: login.needClean">
+        <a href="#" data-bind="click: clean, ga: ['login-popup', 'click_login_clean', formName]">Удалить</a>
+    </span>
+</div>

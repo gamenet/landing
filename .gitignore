@@ -1,0 +1,12 @@
+/.buildpath
+/.project
+/.settings
+/atlassian-ide-plugin.xml
+/cache
+/logs
+/node_modules
+/npm-debug.log
+/public/vendor
+/vendor
+/composer.lock
+/.idea

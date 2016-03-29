@@ -1,0 +1,25 @@
+<div class="login-popup-header">Подтверждение аккаунта</div>
+<div class="login-popup-form">
+    <form data-bind="submit: create">
+        <div class="login-popup-form-container">
+            <div class="login-popup-form_group">
+                <login-input params="value: login, formName: 'confirm'"></login-input>
+            </div>
+            <div class="login-popup-form_group">
+                <password-input params="value: password, customPassword: useGeneratedPassword, formName: 'confirm'"></password-input>
+            </div>
+            <div class="login-popup-form_group center">
+                <button type="submit" class="login-popup-button_green" data-bind="click: create, css: {enable: canRegister}, ga: ['login-popup', 'submit', 'confirm']">Создать аккаунт</button>
+                <div class="login-popup-form_message">и принять <a href="/license/" target="_blank">пользовательское соглашение</a></div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="login-popup-footer">
+    <div class="login-popup-footer-container">
+        <div class="login-popup-footer_group">
+            <div class="login-popup-footer_message">или войти с помощью</div>
+            <div class="login-popup-button_blue" data-bind="click: vkLogin, ga: ['login-popup', 'click_vk', 'confirm']">Вконтакте</div>
+        </div>
+    </div>
+</div>

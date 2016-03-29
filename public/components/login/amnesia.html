@@ -1,0 +1,41 @@
+<div class="login-popup-header">Восстановление пароля</div>
+<div class="login-popup-form" data-bind="visible: restoreSent">
+    <div class="login-popup-form-container">
+        <div class="login-popup-form_group">
+            <div class="login-popup-form_message">
+                Мы отправили письмо на <span data-bind="text: login"/>
+            </div>
+        </div>
+        <div class="login-popup-form_group center">
+            <span class="login-popup-button_green enable" data-bind="click: close">Закрыть окно</span>
+        </div>
+    </div>
+</div>
+<div class="login-popup-form" data-bind="visible: restoreSent() === false">
+    <form data-bind="submit: restore">
+        <div class="login-popup-form-container">
+            <div class="login-popup-form_group">
+                <login-input params="value: login, formName: 'amnesia'"></login-input>
+            </div>
+            <div class="login-popup-form_group center">
+                <img alt="" data-bind="attr: {src: captchaImageSrc}"/>
+                <div class="login-popup-form_message">
+                    <a href="#" data-bind="click: reloadCaptcha, ga: ['login-popup', 'click_reload_captcha', 'amnesia']">показать другую картинку</a>
+                </div>
+            </div>
+            <div class="login-popup-form_group">
+                <captcha-input params="value: captcha, formName: 'amnesia'"></captcha-input>
+            </div>
+            <div class="login-popup-form_group center">
+                <button type="submit" class="login-popup-button_green" data-bind="click: restore, css: {enable: canSend}, ga: ['login-popup', 'click_restore', 'amnesia']">Восстановить пароль</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="login-popup-footer">
+    <div class="login-popup-footer-container">
+        <div class="login-popup-footer_group">
+            <div class="login-popup-button_blue_transparent" data-bind="click: openAuthForm, ga: ['login-popup', 'click_to_auth', 'amnesia']">Я вспомнил пароль</div>
+        </div>
+    </div>
+</div>

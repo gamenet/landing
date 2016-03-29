@@ -1,0 +1,42 @@
+
+.gn_slct {
+    vertical-align: middle;
+    cursor: pointer;
+    background: #fafafa;
+    font-size: 11px;
+    color: #a3a3a3;
+    height: 23px;
+    position: relative;
+    display: block;
+    width: 100%;
+    border: solid 1px #c2c2c2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 2px;
+}
+.gn_slct-big {
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 38px;
+    line-height: 37px;
+    font-size: 14px;
+    color: #a3a3a3;
+    padding: 0 6px;
+}
+.gn_slct:focus {
+    box-shadow: inset 0 0 8px #bde0fc, inset 0 1px 1px #93b0c2, 0 1px 0 rgba(255, 255, 255, .5);
+    -moz-box-shadow: inset 0 0 8px #bde0fc, inset 0 1px 1px #93b0c2, 0 1px 0 rgba(255, 255, 255, .5);
+}
+.gn_slct:disabled,
+.gn_slct:hover:disabled {
+    opacity: .65;
+    cursor: not-allowed;
+}
+

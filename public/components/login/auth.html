@@ -1,0 +1,44 @@
+<div class="login-popup-header">Вход в GameNet</div>
+<div class="login-popup-form">
+    <form data-bind="submit: auth">
+        <div class="login-popup-form-container">
+            <div class="login-popup-form_group">
+                <login-input params="value: login, formName: 'auth'"></login-input>
+                <div class="login-popup-form_message" data-bind="visible: canCreateAccount">
+                    <span>Аккаунта с такой почтой нет. </span>
+                    <a href="#" data-bind="click: openRegForm, ga: ['login-popup', 'click_to_register_switch', 'auth']">Создать аккаунт</a>
+                </div>
+            </div>
+            <div class="login-popup-form_group">
+                <password-input params="value: password, formName: 'auth'"></password-input>
+                <div class="login-popup-form_message"><a href="#" data-bind="click: openAmnesiaForm, ga: ['login-popup', 'click_to_amnesia', 'auth']">напомнить пароль</a></div>
+            </div>
+            <div data-bind="visible: isCaptchaNeed">
+                <div class="login-popup-form_group center">
+                    <img alt="" data-bind="attr: {src: captchaImageSrc}"/>
+                    <div class="login-popup-form_message">
+                        <a href="#" data-bind="click: reloadCaptcha, ga: ['login-popup', 'click_reload_captcha', 'auth']">показать другую картинку</a>
+                    </div>
+                </div>
+                <div class="login-popup-form_group">
+                    <captcha-input params="value: captcha, formName: 'auth'"></captcha-input>
+                </div>
+            </div>
+            <div class="login-popup-form_group center">
+                <button type="submit" class="login-popup-button_green" data-bind="click: auth, css: {enable: canAuth}, ga: ['login-popup', 'submit', 'auth'] ">Войти</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="login-popup-footer">
+    <div class="login-popup-footer-container">
+        <div class="login-popup-footer_group">
+            <div class="login-popup-footer_message">или войти с помощью</div>
+            <div class="login-popup-button_blue" data-bind="click: vkLogin, ga: ['login-popup', 'click_vk', 'auth']">Вконтакте</div>
+        </div>
+        <div class="login-popup-footer_group">
+            <div class="login-popup-footer_message">еще нет аккаунта?</div>
+            <div class="login-popup-button_blue_transparent" data-bind="click: openRegForm, ga: ['login-popup', 'click_to_register', 'auth']">Регистрация</div>
+        </div>
+    </div>
+</div>

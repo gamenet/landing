@@ -1,0 +1,25 @@
+.gn_chb{
+    display:none;
+}
+.gn_chb + .gn_label:before {
+    content: "";
+    display:inline-block;
+    width:16px;
+    height:16px;
+    margin:-2px 8px 0 0;
+    vertical-align:middle;
+    background:url(/images/0.5/sprite-checkbox.png) 0 -25px no-repeat;
+    cursor:pointer;
+}
+.gn_chb:checked + .gn_label:before {
+    background:url(/images/0.5/sprite-checkbox.png) 0 0 no-repeat;
+}
+
+.gn_chb:disabled + .gn_label:before,
+.gn_chb:hover:disabled + .gn_label:before {
+    opacity: .65;
+    cursor: not-allowed;
+}
+
+
+

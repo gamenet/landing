@@ -1,0 +1,29 @@
+{
+    "name": "gamenet/gamenet-landing",
+    "description": "GameNet Landing Site",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "nikolay.bondarenko",
+            "email": "nikolay.bondarenko@syncopate.ru"
+        }
+    ],
+    "type": "project",
+    "keywords": ["gamenet"],
+    "minimum-stability": "stable",
+    "scripts": {
+        "post-update-cmd": [ 
+            "npm update",
+            "bower update"
+        ],
+        "post-install-cmd": [
+            "npm install",  
+            "bower install",
+            "serve"
+        ]
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "twig/twig": "~1.0"
+    }
+}

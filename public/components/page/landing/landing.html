@@ -1,0 +1,44 @@
+<div class="b-phantomers-cbt">
+    <span class="b-phantomers-cbt__logo"/>
+    <span class="b-phantomers-cbt__date">
+        <span class="b-phantomers-cbt__date_white">Закрытый тест</span>
+        <span class="b-phantomers-cbt__date_red">
+            <span>28.01</span> - <span>31.01</span>
+        </span>
+    </span>
+    <span class="b-phantomers-cbt__bt b-phantomers-cbt__bt_apply" data-bind="click: $root.loginModel.openRegForm">
+        Подать заявку на ЗБТ
+    </span>
+    <div class="b-phantomers-cbt__form" data-bind="visible: isStep1">
+        <span class="b-phantomers-cbt__form-row">
+            <span class="b-phantomers-cbt__form-chapter">
+                Оставить почту
+            </span>
+        </span>
+        <span class="b-phantomers-cbt__form-row">
+            <input class="b-phantomers-cbt__input" type="text" data-bind="value: emailLogin, valueUpdate:'afterkeydown'"/>
+            <span class="b-phantomers-cbt__error" data-bind="visible: error, text: errorText"/>
+        </span>
+        <span class="b-phantomers-cbt__form-row">
+             <span class="b-phantomers-cbt__bt b-phantomers-cbt__bt_send" data-bind="click: sendEmail">
+                Отправить
+            </span>
+        </span>
+    </div>
+    <div class="b-phantomers-cbt__form" data-bind="visible: isStep2">
+        <span class="b-phantomers-cbt__form-row">
+            <span class="b-phantomers-cbt__form-chapter">
+                Ура!
+            </span>
+        </span>
+        <span class="b-phantomers-cbt__form-row b-phantomers-cbt__form-row_text">
+             Ваша заявка на участие	в тестировании нового онлайн шутера Phantomers успешно отправлена. За несколько дней до тестирования вам будет отправлено письмо с приглашением.
+            <a target="_blank" class="b-phantomers-cbt__link" href="https://gamenet.ru/games/phantomers/post/1EdEDP">
+                Подробнее о ЗБТ
+            </a>
+        </span>
+        <span class="b-phantomers-cbt__form-row b-phantomers-cbt__form-row_text">
+             Спасибо!
+        </span>
+    </div>
+</div>

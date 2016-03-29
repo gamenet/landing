@@ -1,0 +1,25 @@
+.gn_radio {
+    display:none;
+}
+.gn_radio + .gn_label:before {
+    content: "";
+    display:inline-block;
+    width:16px;
+    height:16px;
+    margin:-2px 8px 0 0;
+    vertical-align:middle;
+    background:url(/images/0.5/sprite-radio.png) 0 -25px no-repeat;
+    cursor:pointer;
+}
+.gn_radio:checked + .gn_label:before {
+    background:url(/images/0.5/sprite-radio.png) 0 0 no-repeat;
+}
+
+.gn_radio:disabled + .gn_label:before,
+.gn_radio:hover:disabled + .gn_label:before {
+    opacity: .65;
+    cursor: not-allowed;
+}
+
+
+

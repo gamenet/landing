@@ -1,0 +1,53 @@
+<div class="login-popup-header">Снятие блокировки</div>
+<div class="login-popup-form">
+    <div class="login-popup-form-container">
+        <div data-bind="if: canSend() === false">
+            <div class="login-popup-form_group">
+                <div class="login-popup-form_message">
+                    Мы зафиксировали попытку подбора пароля к этой учётной записи.
+                    К сожалению, у Вас нет привязанного номера телефона или подтверждённого почтового адреса.
+                    Для восстановления доступа обратитесь в <a href="http://support.gamenet.ru/" target="_blank">службу поддержки</a>.
+                </div>
+            </div>
+        </div>
+        <div data-bind="if: canSend()">
+            <div class="login-popup-form_group">
+                <div class="login-popup-form_message">
+                    Мы зафиксировали попытку подбора пароля к этой учётной записи.
+                    Вы можете авторизоваться введя код подтверждения авторизации.
+                    Так мы сможем понять, что вы действительно владелец этой учётной записи.
+                </div>
+            </div>
+            <div data-bind="if: sent() === false">
+                <div class="login-popup-form_group">
+                    <select data-bind="options: options,
+                        optionsText: 'name',
+                        optionsValue: 'id',
+                        value: type"></select>
+                </div>
+                <div class="login-popup-form_group center">
+                    <span class="login-popup-button_green enable" data-bind="click: send, ga: ['login-popup', 'submit', 'unblock_send']">Отправить</span>
+                </div>
+            </div>
+            <div data-bind="if: sent()">
+                <div class="login-popup-form_group">
+                    <input type="text" placeholder="Код" data-bind="value: code"/>
+                    <div class="login-popup-form_message shake" data-bind="visible: error">
+                        <span data-bind="text: error"/>
+                    </div>
+                </div>
+                <div class="login-popup-form_group center">
+                    <span class="login-popup-button_green enable" data-bind="click: validate, ga: ['login-popup', 'submit', 'unblock_confirm']">Разблокировать</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="login-popup-footer">
+    <div class="login-popup-footer-container">
+        <div class="login-popup-footer_group">
+            <div class="login-popup-footer_message">войти с помощью</div>
+            <div class="login-popup-button_blue" data-bind="click: vkLogin, ga: ['login-popup', 'click_vk', 'unblock']">Вконтакте</div>
+        </div>
+    </div>
+</div>

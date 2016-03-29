@@ -1,0 +1,40 @@
+<div class="b-eclipse js-eclipse" data-bind="click: closePopup"></div>
+<div class="p_popup_wrapper js-popup-wrapper g-hidden"></div>
+<div class="popup_layout" data-bind="if: popupName">
+    <!--ko component: {name: popupName, params: popupParams}-->
+    <!--/ko-->
+</div>
+
+<span id="back-to-top-after-menu" class="b-back-to-top__link-after-menu"></span>
+<div id="back-to-top" class="b-back-to-top">
+        <span class="b-back-to-top__link">
+            <span class="b-back-to-top__link-arrow"></span>
+            <span class="b-back-to-top__link-text">Наверх</span>
+        </span>
+</div>
+
+<div class="b_header">
+    <div class="b_header_wrap">
+        <table class="b_header_t">
+            <tr>
+                <td class="b_header_t1"><a href="/" class="b_logo"></a></td>
+                <td class="b_header_t2"></td>
+                <td class="b_header_t3"></td>
+                <td class="b_header_t4"></td>
+                <td class="b_header_t5">
+                    <div class="b_user_menu">
+                            <span class="b_user_menu__auth_reg" data-bind="with: $root.loginModel">
+                                <button data-bind="click: vkLogin, ga: ['header', 'click', 'vkLogin']"
+                                        class="b_enter_vkontakte_button"></button>
+                                    <span class="b_user_menu__to_enter"
+                                          data-bind="click: openAuthForm, ga: ['header', 'click', 'auth']">Войти</span>
+                                <button class="b_user_menu__to_registration"
+                                        data-bind="click: openRegForm, ga: ['header', 'click', 'register']">Регистрация
+                                </button>
+                            </span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

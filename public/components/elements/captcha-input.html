@@ -1,0 +1,10 @@
+<div class="field--wrapper" data-bind="css: {collapsed: focusedOrNotEmpty, shake: hasErrorOnUnfocused}">
+    <label for="captcha" data-bind="css: {focused: isFocused, error: hasErrorOnUnfocused, valid: captcha.valid}">Символы с картинки</label>
+    <input type="text" id="captcha" tabindex="3" data-bind="value: captcha, valueUpdate: 'input', click: setFocus, hasFocus: isFocused, css: {valid: captcha.valid, error: hasErrorOnUnfocused}"/>
+</div>
+<div class="login-popup-form_message" data-bind="visible: canShowError() && captcha.hasError()">
+    <span data-bind="text: captcha.validationMessage"/>
+    <span data-bind="visible: captcha.needClean">
+        <a href="#" data-bind="click: clean, ga: ['login-popup', 'click_captcha_clean', formName]">Удалить</a>
+    </span>
+</div>

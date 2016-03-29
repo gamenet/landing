@@ -1,0 +1,36 @@
+<div class="login-popup-header">Регистрация в GameNet</div>
+<div class="login-popup-form">
+    <form data-bind="submit: create">
+        <div class="login-popup-form-container">
+            <div class="login-popup-form_group">
+                <login-input params="value: login, formName: 'register'"></login-input>
+                <div class="login-popup-form_message" data-bind="visible: alreadyExists">
+                    <span>У вас уже есть аккаунт</span>
+                    <a href="#" data-bind="click: openAuthForm, ga: ['login-popup', 'click_to_auth_switch', 'register']">Войдите</a>
+                </div>
+                <div class="login-popup-form_message" data-bind="visible: hasCommonError">
+                    <span data-bind="text: commonError"/>
+                </div>
+            </div>
+            <div class="login-popup-form_group" data-bind="ifnot: alreadyExists">
+                <password-input params="value: password, generatedPassword: useGeneratedPassword, formName: 'register'"></password-input>
+            </div>
+            <div class="login-popup-form_group center">
+                <button type="submit" class="login-popup-button_green" data-bind="click: create, css: {enable: canRegister}, ga: ['login-popup', 'submit', 'register']">Создать аккаунт</button>
+                <div class="login-popup-form_message">и принять <a href="/license/" class="underline" target="_blank">пользовательское соглашение</a></div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="login-popup-footer">
+    <div class="login-popup-footer-container">
+        <div class="login-popup-footer_group">
+            <div class="login-popup-footer_message">или войти с помощью</div>
+            <div class="login-popup-button_blue" data-bind="click: vkLogin, ga: ['login-popup', 'click_vk', 'register']">Вконтакте</div>
+        </div>
+        <div class="login-popup-footer_group">
+            <div class="login-popup-footer_message">уже есть аккаунт?</div>
+            <div class="login-popup-button_blue_transparent" data-bind="click: openAuthForm, ga: ['login-popup', 'click_to_auth', 'register']">Вход</div>
+        </div>
+    </div>
+</div>

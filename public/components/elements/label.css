@@ -1,0 +1,14 @@
+.gn_label{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.gn_label.active{
+    background:url(/images/0.5/sprite-checkbox.png) 0 0 no-repeat;
+}
+
+
+
+

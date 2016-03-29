@@ -1,0 +1,5 @@
+.popup_layout {
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+}

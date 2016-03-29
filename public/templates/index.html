@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" prefix="og: http://ogp.me/ns#">
+    <head>
+        {% include "include/header.html" %}
+    </head>
+    <body class="web_part" id="app">
+        {% include "include/top_menu.html" %}
+
+        <div class="l_main">
+            <div class="l_main__body">
+                <!-- ko if: mainModel -->
+                    <!-- ko component: {name: mainModel} -->
+                    <!-- /ko -->
+                <!-- /ko -->
+            </div>
+        </div>
+        {% include "include/footer.html" %}
+
+        <script type="text/javascript" src="/vendor/requirejs/require.js" data-main="/js/app/app.js"></script>
+    </body>
+</html>
